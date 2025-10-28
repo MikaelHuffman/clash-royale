@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/repo-name/static/css/main.b2191e49.css",
+    "main.js": "/repo-name/static/js/main.2d53e46f.js",
+    "static/media/mikaelroyalelogo.png": "/repo-name/static/media/mikaelroyalelogo.c4c8e0f82ca0f1cd6758.png",
+    "index.html": "/repo-name/index.html",
+    "main.b2191e49.css.map": "/repo-name/static/css/main.b2191e49.css.map",
+    "main.2d53e46f.js.map": "/repo-name/static/js/main.2d53e46f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b2191e49.css",
+    "static/js/main.2d53e46f.js"
+  ]
+}
