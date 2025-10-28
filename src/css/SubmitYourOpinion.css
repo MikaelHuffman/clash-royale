@@ -1,0 +1,24 @@
+#btn-submit {
+  text-align: center;
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#btn-submit a {
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--black);
+  padding: 10px 20px;
+  border: 2px solid var(--black);
+  border-radius: 6px;
+  background-color: transparent;
+  transition: all 0.25s ease;
+}
+
+#btn-submit a:hover {
+  background-color: var(--black);
+  color: var(--white);
+  transform: scale(1.05);
+}

@@ -1,0 +1,30 @@
+.image-card {
+  max-width: 260px;
+  text-align: center;
+}
+
+.image-card img {
+  width: 230px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 3px solid var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-card a img:hover {
+  transform: scale(1.05);
+}
+
+.image-card p {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  padding: 10px;
+  margin-top: 10px;
+  color: var(--black);
+  line-height: 1.4;
+  max-width: 230px;
+  margin-left: auto;
+  margin-right: auto;
+}
