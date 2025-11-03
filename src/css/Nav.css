@@ -41,3 +41,51 @@
 #nav-toggle {
   display: none;
 }
+
+@media only screen and (max-width: 768px) {
+  #nav-toggle {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    background: var(--secondary);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    padding: 6px 10px;
+    cursor: pointer;
+    z-index: 1001;
+  }
+
+  #main-nav {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background: var(--secondary);
+    border: 1px solid var(--black);
+    border-radius: 6px;
+    width: 220px;
+    z-index: 1000;
+  }
+
+  #main-nav.active {
+    display: block;
+  }
+
+  #main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  #main-nav li {
+    border-bottom: 1px solid var(--gray);
+  }
+
+  #main-nav a {
+    display: block;
+    padding: 10px;
+    text-align: left;
+  }
+}
