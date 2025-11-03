@@ -1,14 +1,26 @@
 {
   "files": {
-    "main.css": "/clash-royale/static/css/main.b2191e49.css",
-    "main.js": "/clash-royale/static/js/main.65c01314.js",
+    "main.css": "/clash-royale/static/css/main.67e6a0af.css",
+    "main.js": "/clash-royale/static/js/main.6461cc13.js",
+    "static/media/md6.png": "/clash-royale/static/media/md6.03157f50f5eb5635636b.png",
+    "static/media/md5.png": "/clash-royale/static/media/md5.623ddbd0e58d0c742f93.png",
+    "static/media/md3.png": "/clash-royale/static/media/md3.09a5bd6ec593a57dc169.png",
+    "static/media/md2.png": "/clash-royale/static/media/md2.eb8273a263021784f68d.png",
+    "static/media/md4.png": "/clash-royale/static/media/md4.b4526c2cb23e3394d460.png",
+    "static/media/md1.png": "/clash-royale/static/media/md1.3fa2f29a66649eaf447f.png",
+    "static/media/mikaeldeck1.png": "/clash-royale/static/media/mikaeldeck1.7834c0a7471759ff3d37.png",
+    "static/media/mikaeldeck2.png": "/clash-royale/static/media/mikaeldeck2.1c507de37c93426037fc.png",
+    "static/media/mikaeldeck3.png": "/clash-royale/static/media/mikaeldeck3.bfb75a393da387b8a33d.png",
+    "static/media/opinions.png": "/clash-royale/static/media/opinions.d17592f95eb14d578787.png",
+    "static/media/mikaelsdecks.png": "/clash-royale/static/media/mikaelsdecks.366641ed99174c2a3cb8.png",
+    "static/media/metadecks.png": "/clash-royale/static/media/metadecks.cb4c51ed4f6461ec4f30.png",
     "static/media/mikaelroyalelogo.png": "/clash-royale/static/media/mikaelroyalelogo.c4c8e0f82ca0f1cd6758.png",
     "index.html": "/clash-royale/index.html",
-    "main.b2191e49.css.map": "/clash-royale/static/css/main.b2191e49.css.map",
-    "main.65c01314.js.map": "/clash-royale/static/js/main.65c01314.js.map"
+    "main.67e6a0af.css.map": "/clash-royale/static/css/main.67e6a0af.css.map",
+    "main.6461cc13.js.map": "/clash-royale/static/js/main.6461cc13.js.map"
   },
   "entrypoints": [
-    "static/css/main.b2191e49.css",
-    "static/js/main.65c01314.js"
+    "static/css/main.67e6a0af.css",
+    "static/js/main.6461cc13.js"
   ]
 }
