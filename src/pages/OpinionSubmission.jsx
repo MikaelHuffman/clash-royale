@@ -1,19 +1,16 @@
-import { Link } from "react-router-dom";
+import "../css/OpinionSubmission.css";
 import "../css/Opinions.css";
+import AddOpinion from "../components/AddOpinion";
 
 const OpinionSubmission = () => {
+  const noopClose = () => {}; // required by AddOpinion, does nothing here
+
   return (
-    <div>
-      <div id="input" style={{ textAlign: "center", marginTop: 20 }}>
-        <h3>Username:</h3>
-        <input type="text" name="username" placeholder="Enter your username" />
+    <div id="opinion-submission">
+      <h2>Submit your opinion</h2>
 
-        <h3>Opinion:</h3>
-        <input type="text" name="opinion" placeholder="Enter your opinion" />
-
-        <div style={{ marginTop: 12 }}>
-          <button type="button">Submit</button>
-        </div>
+      <div className="opinion-form-container">
+        <AddOpinion closeAddDialog={noopClose} />
       </div>
     </div>
   );

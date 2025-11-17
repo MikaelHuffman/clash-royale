@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import DeckPreview from "./DeckPreview";
 
-const SERVER_BASE = "https://server-clash-royale.onrender.com";
-
+const SERVER_BASE = "https://server-clash-royale.onrender.com"; 
 const Slideshow = () => {
   const [slideIndex, setSlideIndex] = useState(0);
   const [images, setImages] = useState([]);

@@ -1,0 +1,13 @@
+#opinion-submission {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#opinion-submission h2 {
+  margin-bottom: 20px;
+}
+
+.opinion-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
