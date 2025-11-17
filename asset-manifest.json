@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/clash-royale/static/css/main.f9600219.css",
-    "main.js": "/clash-royale/static/js/main.0abcf35e.js",
+    "main.css": "/clash-royale/static/css/main.dc42ccef.css",
+    "main.js": "/clash-royale/static/js/main.6e6d0e88.js",
     "static/media/md6.png": "/clash-royale/static/media/md6.03157f50f5eb5635636b.png",
     "static/media/md5.png": "/clash-royale/static/media/md5.623ddbd0e58d0c742f93.png",
     "static/media/md3.png": "/clash-royale/static/media/md3.09a5bd6ec593a57dc169.png",
@@ -13,11 +13,11 @@
     "static/media/metadecks.png": "/clash-royale/static/media/metadecks.cb4c51ed4f6461ec4f30.png",
     "static/media/mikaelroyalelogo.png": "/clash-royale/static/media/mikaelroyalelogo.c4c8e0f82ca0f1cd6758.png",
     "index.html": "/clash-royale/index.html",
-    "main.f9600219.css.map": "/clash-royale/static/css/main.f9600219.css.map",
-    "main.0abcf35e.js.map": "/clash-royale/static/js/main.0abcf35e.js.map"
+    "main.dc42ccef.css.map": "/clash-royale/static/css/main.dc42ccef.css.map",
+    "main.6e6d0e88.js.map": "/clash-royale/static/js/main.6e6d0e88.js.map"
   },
   "entrypoints": [
-    "static/css/main.f9600219.css",
-    "static/js/main.0abcf35e.js"
+    "static/css/main.dc42ccef.css",
+    "static/js/main.6e6d0e88.js"
   ]
 }
