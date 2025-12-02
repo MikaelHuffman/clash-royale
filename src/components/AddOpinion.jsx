@@ -9,21 +9,22 @@ const AddOpinion = (props) => {
     setResult("Sending...");
 
     const form = event.target;
-    const payload = {
-      user: form.user.value.trim(),
-      opinion: form.opinion.value.trim(),
-    };
+    const formData = new FormData();
+    formData.append("user", form.user.value.trim());
+    formData.append("opinion", form.opinion.value.trim());
+    if (form.img && form.img.files && form.img.files[0]) {
+      formData.append("img", form.img.files[0]);
+    }
 
-    if (!payload.user || !payload.opinion) {
+    if (!form.user.value.trim() || !form.opinion.value.trim()) {
       setResult("Please provide both a username and an opinion.");
       return;
     }
 
     try {
-      const response = await fetch("https://server-clash-royale.onrender.com/api/opinions", { 
+      const response = await fetch("http://localhost:3001/api/opinions", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
+        body: formData,
       });
 
       if (response.ok) {
@@ -31,10 +32,7 @@ const AddOpinion = (props) => {
         setResult("Opinion added successfully");
         form.reset();
         if (typeof props.closeAddDialog === "function") props.closeAddDialog();
-
-        if (typeof props.updateOpinions === "function") {
-          props.updateOpinions(created);
-        }
+        if (typeof props.updateOpinions === "function") props.updateOpinions(created);
         window.dispatchEvent(new CustomEvent("opinionAdded", { detail: created }));
       } else {
         let text;
@@ -64,6 +62,11 @@ const AddOpinion = (props) => {
       <p>
         <label htmlFor="opinion">Opinion:</label>
         <textarea id="opinion" name="opinion" required minLength="3" rows="4" />
+      </p>
+
+      <p>
+        <label htmlFor="img">Attach image (optional):</label>
+        <input type="file" id="img" name="img" accept="image/*" />
       </p>
 
       <p>

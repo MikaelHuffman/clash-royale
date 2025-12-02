@@ -55,8 +55,6 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 26px rgba(0,0,0,0.25);
 }
-
-/* DEBUG/QUICK FIX: make opinion cards clearly visible */
 #opinions-list .opinion {
   background: #ffffff !important;
   color: #000000 !important;
@@ -73,4 +71,22 @@
   color: #000 !important;
   margin: 0 0 6px 0 !important;
   line-height: 1.3 !important;
+}
+
+.opinion-btn {
+  display: inline-block;
+  padding: 6px 18px;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.opinion-btn:hover {
+  background-color: black;
+  color: white;
+  transform: scale(1.05);
 }

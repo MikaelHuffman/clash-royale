@@ -6,7 +6,7 @@ const CommunityOpinions = () => {
 
   const loadOpinions = async () => {
     try {
-      const res = await fetch("https://server-clash-royale.onrender.com/api/opinions"); 
+      const res = await fetch("http://localhost:3001/api/opinions");
       if (!res.ok) throw new Error("Failed to fetch opinions");
       const data = await res.json();
       const sorted = Array.isArray(data) ? data.slice().sort((a, b) => (b._id || 0) - (a._id || 0)) : [];
@@ -22,16 +22,28 @@ const CommunityOpinions = () => {
 
     const handleNew = (e) => {
       const created = e?.detail;
-      if (!created) {
-        loadOpinions();
-        return;
-      }
+      if (!created) { loadOpinions(); return; }
       setOpinions(prev => [created, ...prev]);
+    };
+    const handleUpdated = (e) => {
+      const updated = e?.detail;
+      if (!updated) { loadOpinions(); return; }
+      setOpinions(prev => prev.map(p => (p._id === updated._id ? updated : p)));
+    };
+    const handleDeleted = (e) => {
+      const info = e?.detail;
+      if (!info) { loadOpinions(); return; }
+      setOpinions(prev => prev.filter(p => p._id !== info.id));
     };
 
     window.addEventListener("opinionAdded", handleNew);
+    window.addEventListener("opinionUpdated", handleUpdated);
+    window.addEventListener("opinionDeleted", handleDeleted);
+
     return () => {
       window.removeEventListener("opinionAdded", handleNew);
+      window.removeEventListener("opinionUpdated", handleUpdated);
+      window.removeEventListener("opinionDeleted", handleDeleted);
     };
   }, []);
 
@@ -47,7 +59,7 @@ const CommunityOpinions = () => {
       <div className="three-opinions-container">
         {weekly.length > 0 ? (
           weekly.map((op) => (
-            <OpinionCard key={op._id} user={op.user} opinion={op.opinion} />
+            <OpinionCard key={op._id} id={op._id} user={op.user} opinion={op.opinion} img_name={op.img_name} />
           ))
         ) : (
           <p>No opinions</p>
@@ -61,7 +73,7 @@ const CommunityOpinions = () => {
       <div className="three-opinions-container">
         {allTime.length > 0 ? (
           allTime.map((op) => (
-            <OpinionCard key={op._id} user={op.user} opinion={op.opinion} />
+            <OpinionCard key={op._id} id={op._id} user={op.user} opinion={op.opinion} img_name={op.img_name} />
           ))
         ) : (
           <p>No additional opinions yet.</p>
