@@ -8,7 +8,7 @@ const OpinionCard = ({ user = "Username", opinion = "Opinion", id, img_name }) =
   const handleDelete = async () => {
     if (!window.confirm("Delete this opinion?")) return;
     try {
-      const res = await fetch(`http://localhost:3001/api/opinions/${id}`, { method: "DELETE" });
+      const res = await fetch(`https://server-clash-royale.onrender.com/api/opinions/${id}`, { method: "DELETE" });
       if (res.ok) {
         setStatus("Deleted");
         window.dispatchEvent(new CustomEvent("opinionDeleted", { detail: { id } }));
@@ -35,7 +35,7 @@ const OpinionCard = ({ user = "Username", opinion = "Opinion", id, img_name }) =
     if (form.img && form.img.files && form.img.files[0]) formData.append("img", form.img.files[0]);
 
     try {
-      const res = await fetch(`http://localhost:3001/api/opinions/${id}`, {
+      const res = await fetch(`https://server-clash-royale.onrender.com/api/opinions/${id}`, { 
         method: "PUT",
         body: formData,
       });
@@ -58,7 +58,7 @@ const OpinionCard = ({ user = "Username", opinion = "Opinion", id, img_name }) =
     <div className="opinion">
       {!editing ? (
         <>
-          {img_name ? <img src={`http://localhost:3001/${img_name}`} alt="opinion" style={{ maxWidth: "100%", borderRadius: 8 }} /> : null}
+          {img_name ? <img src={`https://server-clash-royale.onrender.com/${img_name}`} alt="opinion" style={{ maxWidth: "100%", borderRadius: 8 }} /> : null}
           <h3>{user}</h3>
           <p>{opinion}</p>
           <div style={{ marginTop: 8 }}>

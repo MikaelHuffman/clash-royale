@@ -55,6 +55,7 @@
   transform: translateY(-3px);
   box-shadow: 0 10px 26px rgba(0,0,0,0.25);
 }
+
 #opinions-list .opinion {
   background: #ffffff !important;
   color: #000000 !important;

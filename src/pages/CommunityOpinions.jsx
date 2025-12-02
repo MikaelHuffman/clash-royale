@@ -6,7 +6,7 @@ const CommunityOpinions = () => {
 
   const loadOpinions = async () => {
     try {
-      const res = await fetch("http://localhost:3001/api/opinions");
+      const res = await fetch("https://server-clash-royale.onrender.com/api/opinions");
       if (!res.ok) throw new Error("Failed to fetch opinions");
       const data = await res.json();
       const sorted = Array.isArray(data) ? data.slice().sort((a, b) => (b._id || 0) - (a._id || 0)) : [];

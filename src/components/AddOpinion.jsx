@@ -22,7 +22,7 @@ const AddOpinion = (props) => {
     }
 
     try {
-      const response = await fetch("http://localhost:3001/api/opinions", {
+      const response = await fetch("https://server-clash-royale.onrender.com/api/opinions", {
         method: "POST",
         body: formData,
       });
